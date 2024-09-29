@@ -1,1 +1,1 @@
-This Repository is about solving the problem of Baekjun's algorithm
+This repository contains solutions to problems from Baekjoon Online Judge.
