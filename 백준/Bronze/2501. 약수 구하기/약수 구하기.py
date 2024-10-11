@@ -1,11 +1,11 @@
 n, k = map(int, input().split())
-measure = []
+divisor = []
 
 for i in range(1, n + 1):
     if n % i == 0:
-        measure.append(i)
+        divisor.append(i)
 
-if len(measure) >= k:
-    print(measure[k - 1])
+if len(divisor) >= k:
+    print(divisor[k - 1])
 else:
     print(0)
