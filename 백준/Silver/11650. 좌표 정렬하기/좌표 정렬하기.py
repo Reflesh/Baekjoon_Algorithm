@@ -10,6 +10,7 @@ loc_list_sorted = sorted(loc_list)
 for x, y in loc_list_sorted:
     print(x, y)
 
+#lambda version
 #n = int(input())
 #loc_list = []
 
