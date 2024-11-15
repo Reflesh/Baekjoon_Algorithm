@@ -1,6 +1,9 @@
-import math
-
 A, B = map(int, input().split())
-gcd = math.gcd(A, B)
-result = A * B // gcd
-print(result)
+mul = A * B
+
+while B != 0:
+    if A > B:
+        A, B = B, A
+    B %= A
+
+print(mul // A)
