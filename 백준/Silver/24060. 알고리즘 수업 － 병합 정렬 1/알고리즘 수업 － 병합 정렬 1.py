@@ -29,7 +29,7 @@ def merge(A, p, q, r, save_count, cnt):
         tmp.append(A[j])
         j += 1
     i = p
-    t = 0
+    t = 0 # 의사코드에서는 t가 1로 시작하지만 해당 코드는 배열에 append로 삽입하므로 0부터 시작
     result = -1
     while i <= r:
         A[i] = tmp[t]
