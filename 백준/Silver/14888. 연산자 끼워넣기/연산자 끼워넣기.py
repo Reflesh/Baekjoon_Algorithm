@@ -21,7 +21,7 @@ def solve(n, result):
         if operator[3]:
             operator[3] -= 1
             if result < 0 or num[n] < 0:
-                solve(n + 1, -(abs(result) // num[n]))
+                solve(n + 1, -(abs(result) // abs(num[n])))
             else:
                 solve(n + 1, result // num[n])
             operator[3] += 1
