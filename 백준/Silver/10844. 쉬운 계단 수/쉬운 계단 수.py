@@ -9,7 +9,7 @@ def sol(n):
     for i in range(2, n + 1):
         for j in range(10):
             if j > 0:
-                result[i][j] = result[i - 1][j - 1]
+                result[i][j] += result[i - 1][j - 1]
             if j < 9:
                 result[i][j] += result[i - 1][j + 1]
         
