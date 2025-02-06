@@ -23,13 +23,12 @@ int main() {
         }
         if(get_Tree >= need_length) {// 더 많은 나무를 가지게 되는 경우
             start = mid + 1;
-            result = mid;
         }
         else // 목표치보다 더 작은 나무를 가지게 되는 경우         
             end = mid - 1;
     }
 
-    cout << result << endl;
+    cout << end << endl;
 
     return 0;
 }
