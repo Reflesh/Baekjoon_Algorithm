@@ -3,8 +3,8 @@ import heapq
 input = sys.stdin.readline
 
 cnt = int(input())
-max_heap = []
-min_heap = []
+max_heap = [] # 음수 절댓값 저장
+min_heap = [] # 양수 절댓값 저장
 for _ in range(cnt):
     x = int(input())
     if x == 0: # 결과값 출력
@@ -20,7 +20,7 @@ for _ in range(cnt):
             print(-heapq.heappop(max_heap))
         else:
             print(0)
-    elif x > 0: # 음수일때
+    elif x > 0: # 양수일때
         heapq.heappush(min_heap, x)
-    elif x < 0: # 양수일때
-        heapq.heappush(max_heap, -x)
+    elif x < 0: # 수일때
+        heapq.heappush(max_heap, -x) 
