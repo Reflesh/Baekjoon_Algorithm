@@ -22,5 +22,5 @@ for _ in range(cnt):
             print(0)
     elif x > 0: # 양수일때
         heapq.heappush(min_heap, x)
-    elif x < 0: # 수일때
+    elif x < 0: # 음수일때
         heapq.heappush(max_heap, -x) 
