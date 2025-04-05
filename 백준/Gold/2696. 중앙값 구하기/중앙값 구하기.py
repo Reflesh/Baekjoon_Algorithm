@@ -7,7 +7,6 @@ for _ in range(test_case):
     result = [] # 중간값 저장
     left = [] # 중간값 이하의 숫자 저장(음수로 저장)
     right = [] # 중간값 초과의 숫자 저장
-    cnt = []
     cnt = 0
     for _ in range(size//10+1): # 10개씩 나누어 입력받기(문제조건)
         seq = list(map(int, input().split()))
