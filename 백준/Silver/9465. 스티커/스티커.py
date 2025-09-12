@@ -1,0 +1,21 @@
+import sys
+
+input = sys.stdin.readline
+
+case = int(input())
+for _ in range(case):
+    sticker_num = int(input())
+    sticker = [list(map(int, input().split())) for _ in range(2)]
+    
+    if sticker_num == 1:
+        print(max(sticker[0][0], sticker[1][0]))
+        continue
+    
+    sticker[0][1] += sticker[1][0]
+    sticker[1][1] += sticker[0][0]
+    
+    for i in range(2, sticker_num):
+        sticker[0][i] += max(sticker[1][i-1], sticker[1][i-2])
+        sticker[1][i] += max(sticker[0][i-1], sticker[0][i-2])
+        
+    print(max(sticker[0][sticker_num-1], sticker[1][sticker_num-1]))
